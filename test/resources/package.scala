@@ -36,8 +36,8 @@ package object testData {
 
   def loadFile(file: String): String = Json.parse(getClass.getResourceAsStream(s"/$file")).toString
 
-  val saReturn = loadFile("SAReturn.json")
-  val saDebit = loadFile("SADebit.json")
+  val saReturn = loadFile("SAReturnHappy.json")
+  val saDebit = loadFile("SADebitHappy.json")
   val commPreferences = loadFile("CommPreferences.json")
 
   val ddiResponse = loadFile("DDI.json")

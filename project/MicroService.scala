@@ -1,10 +1,9 @@
 import sbt.Keys._
-import sbt.Tests.{SubProcess, Group}
+import sbt.Tests.{Group, SubProcess}
 import sbt._
 import play.routes.compiler.StaticRoutesGenerator
+import play.sbt.PlayImport.PlayKeys
 import uk.gov.hmrc.sbtdistributables.SbtDistributablesPlugin._
-
-
 import play.sbt.routes.RoutesCompiler.autoImport._
 trait MicroService {
 
@@ -30,6 +29,7 @@ trait MicroService {
     .settings(playSettings : _*)
     .settings(scalaSettings: _*)
     .settings(publishingSettings: _*)
+    .settings(PlayKeys.playDefaultPort := 8887)
     .settings(defaultSettings(): _*)
     .settings(
       libraryDependencies ++= appDependencies,
