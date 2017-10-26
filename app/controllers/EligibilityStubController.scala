@@ -18,7 +18,7 @@ package uk.gov.hmrc.ssttp.desstub.controllers
 
 import javax.inject.Inject
 
-import play.api.Logger
+
 import play.api.mvc.{Action, AnyContent}
 
 class EligibilityStubController @Inject()() extends ResponseHandling {
