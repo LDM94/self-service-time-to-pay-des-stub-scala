@@ -39,7 +39,6 @@ class EligibilityStubController @Inject()() extends ResponseHandling {
   def generateSADebits(utr: String): Action[AnyContent]= {
     serveFile(pickFileSaDebits(utr))(utr)
   }
-  //8266940627
 
   def pickFileSaDebits(utr: String) = utr match{
     case "4534690744" => "/SADebitUnHappyInsignificantDept.json"
