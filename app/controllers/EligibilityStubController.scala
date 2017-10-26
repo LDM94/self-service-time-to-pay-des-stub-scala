@@ -30,23 +30,22 @@ class EligibilityStubController @Inject()() extends ResponseHandling {
     serveFile(pickFileSaReturns(utr))(utr)
 
   def pickFileSaReturns(utr: String) = utr match{
-    case "2131397593" => "/SAReturnsNotSubmitted.json"
+    case "9370940447" => "/SAReturnsNotSubmitted.json"
     case _ => "/SAReturnHappy.json"
   }
   /**
     * Represents the getSADebits endpoint for DES which is called by Time To Pay Taxpayer
     */
   def generateSADebits(utr: String): Action[AnyContent]= {
-    Logger.info("\n\n + utr + \n\n" + utr)
     serveFile(pickFileSaDebits(utr))(utr)
   }
   //8266940627
 
   def pickFileSaDebits(utr: String) = utr match{
-    case "4629044474" => "/SADebitUnHappyInsignificantDept.json"
-    case "5419269806" =>  "/SaDebitUnHappyTooMuch.json"
-    case "8119337614" =>  "/SaDeptTooOld.json"
-    case "2131397593" =>  "/SaDebitNotSubmittedTaxYear.json"
+    case "4534690744" => "/SADebitUnHappyInsignificantDept.json"
+    case "9446580253" =>  "/SaDebitUnHappyTooMuch.json"
+    case "6068021487" =>  "/SaDeptTooOld.json"
+    case "9370940447" =>  "/SaDebitNotSubmittedTaxYear.json"
     case _ => "/SADebitHappy.json"
   }
 
