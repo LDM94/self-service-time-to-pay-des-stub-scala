@@ -6,7 +6,7 @@
         "originCode": "IN1",
         "creationDate": "2017-11-05"
       },
-      "relevantDueDate": "2017-11-05",
+      "relevantDueDate": "2017-12-30",
       "totalOutstanding": 2500
     },
     {
@@ -15,7 +15,7 @@
         "originCode": "IN2",
         "creationDate": "2017-11-05"
       },
-      "relevantDueDate": "2017-11-25",
+      "relevantDueDate": "2017-12-25",
       "totalOutstanding": 3250
     }
   ]
